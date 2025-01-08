@@ -4,11 +4,47 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Prithvi's Portfolio</title>
+
+        <style>
+            h1 {
+                background-color: antiquewhite;
+            }
+            .container {
+              display: flex;
+            }
+            iframe {
+              width: 1000px;
+              height: 800px;
+              border: none;
+            }
+            .menu {
+              background-color: silver;
+              padding: 5px;
+            }
+        </style>
     </head>
     <body>
+       
         
-        <h1> Hello! Welcome to my world </h1>
-        <a href="https://prithvikv.github.io/htmlcssjs/">HtmlCssJs</a>
-        
+        <h1> Prithvi K Venkateshmurthy </h1>
+        <div>
+            <h3>Github Projects</h3>
+        </div>
+        <div class="container">
+            <div id="username" class="menu"></div>
+            <div><iframe name="frm"></iframe></div>
+        </div>
+        <script>
+            let githublinks = ["htmlcssjs", "project2"]
+            let str = "";
+            githublinks.forEach((value, index) => {
+              str =
+                str +
+                `${index + 1}.<a href='https://prithvikv.github.io/${value}/' target='frm'>${value}</a><br>`;
+            });
+
+            username.innerHTML = str;
+            console.log(str);
+        </script>
     </body>
 </html>
